@@ -1,0 +1,123 @@
+{
+  "shoppingLists": [
+    {
+      "id": "1",
+      "status": "active",
+      "name": "Nudle s Makems",
+      "ownerId": 1,
+      "ownerName": "Petr Jun",
+      "members": [
+        {
+          "id": 2,
+          "name": "Vojtech Vihan"
+        },
+        {
+          "id": 3,
+          "name": "Lukas Holy"
+        }
+      ],
+      "items": [
+        {
+          "id": 1,
+          "name": "Nudle",
+          "status": false
+        },
+        {
+          "id": 2,
+          "name": "Mak",
+          "status": false
+        },
+        {
+          "id": 3,
+          "name": "Cukr",
+          "status": false
+        }
+      ],
+      "deleted": false
+    },
+    {
+      "id": "2",
+      "status": "done",
+      "name": "Denni nakup",
+      "ownerId": 2,
+      "ownerName": "Vojtech Vihan",
+      "members": [],
+      "items": [
+        {
+          "id": 1,
+          "name": "Rohliky 10x",
+          "status": false
+        },
+        {
+          "id": 2,
+          "name": "Maslo",
+          "status": false
+        }
+      ],
+      "deleted": false
+    },
+    {
+      "id": "3",
+      "status": "done",
+      "name": "Denni nakup2",
+      "ownerId": 3,
+      "ownerName": "Lukas Holy",
+      "members": [
+        {
+          "id": 1,
+          "name": "Petr Jun"
+        }
+      ],
+      "items": [
+        {
+          "id": 1,
+          "name": "Nevim",
+          "status": false
+        },
+        {
+          "id": 2,
+          "name": "Co",
+          "status": false
+        },
+        {
+          "id": 3,
+          "name": "Tam",
+          "status": false
+        },
+        {
+          "id": 4,
+          "name": "Patri",
+          "status": false
+        }
+      ],
+      "deleted": false
+    },
+    {
+      "id": "4",
+      "status": "active",
+      "name": "asdasd",
+      "ownerId": "1",
+      "ownerName": "Petr Jun",
+      "members": [],
+      "items": [],
+      "deleted": false
+    }
+  ],
+  "users": [
+    {
+      "id": "1",
+      "name": "Petr Jun",
+      "email": "tst@tst.cz"
+    },
+    {
+      "id": "2",
+      "name": "Vojtech Vihan",
+      "email": "tst@tst.com"
+    },
+    {
+      "id": "3",
+      "name": "Lukas Holy",
+      "email": "tst@tst.io"
+    }
+  ]
+}

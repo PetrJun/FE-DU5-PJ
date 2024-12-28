@@ -1,0 +1,78 @@
+{
+    "dashboard": {
+        "all": "All",
+        "active": "Active",
+        "create": "Create",
+        "noActiveLists": "You dont have any active lists!!!",
+        "noLists": "You dont have any lists!!!",
+        "addShoppingList": {
+            "title": "Create new shopping list",
+            "name": "Shopping list name",
+            "placeholder": "Type the name of the new list",
+            "error": "You must type the name of the shopping list!!"
+        },
+        "shortDetail": {
+            "active": "Active",
+            "done": "Done",
+            "detail": "Detail",
+            "owner": "Owner",
+            "member": "Member"
+        },
+        "removeShoppingList": {
+            "title": "Remove shopping list",
+            "body": "Are you sure you want to delete this shopping list:"
+        }
+    },
+    "detail": {
+        "placeholder": "Enter a new name",
+        "confirm": "Confirm",
+        "changeName": "Change Name",
+        "noRules": "You don't have permissions!!!",
+        "itemsCard": {
+            "all": "All",
+            "notDone": "Unresolved",
+            "addItem": "Add Item",
+            "items": "Items"
+        },
+        "addItem": {
+            "title": "Add Item",
+            "itemName": "Item Name",
+            "placeholder": "Enter the item name",
+            "alert": "You must write an item name!!"
+        },
+        "removeItem": {
+            "title": "Remove Item",
+            "body": "Are you sure you want to remove this item:"
+        },
+        "membersCard": {
+            "owner": "Owner",
+            "addMember": "Add Member",
+            "members": "Members"
+        },
+        "addMember": {
+            "title": "Add Member",
+            "noAvailableUsers": "No one else is available",
+            "chooseMember": "Select a user",
+            "alert": "You must select a member!!"
+        },
+        "removeMember": {
+            "title": "Remove Member",
+            "body": "Are you sure you want to remove this member:"
+        }
+    },
+    "public": {
+        "close": "Close",
+        "create": "Create",
+        "logout": "Logout",
+        "delete": "Delete",
+        "save": "Save"
+    },
+    "language": {
+        "cs": "Czech",
+        "en": "English"
+    },
+    "theme": {
+        "lightTheme": "Light",
+        "darkTheme": "Dark"
+    }
+}

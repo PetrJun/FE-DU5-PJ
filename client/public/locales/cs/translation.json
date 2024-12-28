@@ -1,0 +1,78 @@
+{
+    "dashboard": {
+        "all": "Vše",
+        "active": "Aktivní",
+        "create": "Vytvořit",
+        "noActiveLists": "Nemas žádné aktivni listy!!!",
+        "noLists": "Nemas žádné listy!!!",
+        "addShoppingList": {
+            "title": "Vytvořit nový nakupni seznam",
+            "name": "Název nakupniho seznamu",
+            "placeholder": "Napiš jméno nového listu",
+            "error": "Musíš napsat název nakupniho seznamu!!"
+        },
+        "shortDetail": {
+            "active": "Aktivní",
+            "done": "Dokončený",
+            "detail": "Detail",
+            "owner": "Vlastník",
+            "member": "Člen"
+        },
+        "removeShoppingList": {
+            "title": "Odstranit nákupní seznam",
+            "body": "Opravdu chcete odstranit tento nákupní seznam:"
+        }
+    },
+    "detail": {
+        "placeholder": "Zadejte nový název",
+        "confirm": "Potvrdit",
+        "changeName": "Změnit název",
+        "noRules": "Nemas prava!!!",
+        "itemsCard": {
+            "all": "Vše",
+            "notDone": "Nevyřešené",
+            "addItem": "Přidat položku",
+            "items": "Položky"
+        },
+        "addItem": {
+            "title": "Přidat položku",
+            "itemName": "Název položky",
+            "placeholder": "Zadejte název položky",
+            "alert": "Musíš napsat název položky!!"
+        },
+        "removeItem": {
+            "title": "Odstranit položku",
+            "body": "Opravdu chcete odstranit tuto položku:"
+        },
+        "membersCard": {
+            "owner": "Vlastník",
+            "addMember": "Přidat osobu",
+            "members": "Členové"
+        },
+        "addMember": {
+            "title": "Přidat člena",
+            "noAvailableUsers": "Už tu nikdo není",
+            "chooseMember": "Vyberte uživatele",
+            "alert": "Musíš vybrat člena!!"
+        },
+        "removeMember": {
+            "title": "Odstranit člena",
+            "body": "Opravdu chcete odstranit tohoto člena:"
+        }
+    },
+    "public": {
+        "close": "Zavřít",
+        "create": "Vytvořit",
+        "logout": "Odhlásit",
+        "delete": "Odstranit",
+        "save": "Uložit"
+    },
+    "language": {
+        "cs": "Čeština",
+        "en": "Angličtina"
+    },
+    "theme": {
+        "lightTheme": "Světlý",
+        "darkTheme": "Tmavý"
+    }
+}
