@@ -27,7 +27,7 @@ const darkTheme = {
 const ThemeContext = createContext();
 
 export const ThemeProvider = ({ children }) => {
-    const [theme, setTheme] = useState(lightTheme); // Výchozí téma je světelné
+    const [theme, setTheme] = useState(darkTheme); // Výchozí téma je světelné
 
     const toggleTheme = () => {
         setTheme(prevTheme => (prevTheme === lightTheme ? darkTheme : lightTheme));

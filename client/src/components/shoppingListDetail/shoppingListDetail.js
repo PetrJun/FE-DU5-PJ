@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, Form, InputGroup } from 'react-bootstrap'
+import { Button, Form, InputGroup, Container } from 'react-bootstrap'
 import { useData } from '../../providers/dataProvider';
 import ItemsCard from './itemsCard'
 import MembersCard from './membersCard'
@@ -32,8 +32,8 @@ export default function ShoppingListDetail({id}) {
     const rules = (Number(loggedInUser.id) === shoppingList?.ownerId || shoppingList?.members.some(member => member.id === Number(loggedInUser.id)))
 
     return (
-        <div className="p-3">
-            {shoppingList && rules && 
+        <Container className="col-12 col-lg-6 p-3">
+            {shoppingList && rules ? (
                 <>
                     <h2 className="h3 text-center mb-3">
                         {editingName ? (
@@ -52,6 +52,8 @@ export default function ShoppingListDetail({id}) {
                         )}
                     </h2>
                     <hr />
+
+                    {/* Change Name Button (Only visible if user is the owner and not editing) */}
                     {!editingName && Number(loggedInUser.id) === shoppingList?.ownerId && (
                         <Button 
                             variant="light" 
@@ -62,22 +64,21 @@ export default function ShoppingListDetail({id}) {
                         </Button>
                     )}
 
+                    {/* ItemsCard */}
                     <ItemsCard 
                         id={id}
                         items={shoppingList.items}
                     />
 
+                    {/* MembersCard */}
                     <MembersCard 
                         id={id}
                         shoppingList={shoppingList}
                     />
                 </>
-            }
-            {!rules && 
-                <h1>
-                    {t('detail.noRules')}
-                </h1>
-            }
-        </div>
+            ) : (
+                <h1>{t('detail.noRules')}</h1>
+            )}
+        </Container>
     )
 }

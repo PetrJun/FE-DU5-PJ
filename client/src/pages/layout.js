@@ -30,7 +30,7 @@ export default function Layout() {
     return (
         <div className="d-flex flex-column min-vh-100">
             <Navbar bg={theme.bg} variant={theme.variant} expand="lg" className="mb-4 p-2">
-                <div className="container d-flex justify-content-center w-100">
+                <div className="container d-flex justify-content-center col-12 col-lg-6">
                     <Navbar.Brand as={Link} to="/" className="mx-auto">
                         ShoppingListApp
                     </Navbar.Brand>

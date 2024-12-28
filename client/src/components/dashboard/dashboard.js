@@ -1,5 +1,5 @@
 import { useEffect, useState } from 'react'
-import { Button, ButtonGroup } from 'react-bootstrap'
+import { Button, ButtonGroup, Container } from 'react-bootstrap'
 import { useData } from '../../providers/dataProvider';
 import { Plus } from 'react-bootstrap-icons';
 import ShoppingListShortDetail from './shoppingListShortDetail'
@@ -19,10 +19,6 @@ export default function DashboardDetail() {
 
     useEffect(() => {
         if(loggedInUser?.id){
-            console.log("--------------------------------");
-            console.log("shoppingLists: ", shoppingLists);
-            console.log("loggedInUser?.id: ", loggedInUser?.id);
-            console.log("--------------------------------");
             setShoppingListsDashboard(shoppingLists.filter(list => 
                 ((Number(list.ownerId) === Number(loggedInUser.id) || list.members.find(member => Number(member.id) == Number(loggedInUser.id))) && !list.deleted)
             ))
@@ -32,62 +28,71 @@ export default function DashboardDetail() {
     }, [loggedInUser, shoppingLists])
 
     return (
-        <div className="p-3">
-            <ButtonGroup>
-                <Button 
-                    size="sm" 
+        <Container className='col-12 col-lg-6 p-3'>
+            {/* Button Group */}
+            <ButtonGroup className="mb-3">
+                <Button
+                    size="sm"
                     variant={filter === 'all' ? 'secondary' : 'outline-secondary'}
                     onClick={() => setFilter('all')}
                 >
                     {t('dashboard.all')}
                 </Button>
-                <Button 
-                    size="sm" 
+                <Button
+                    size="sm"
                     variant={filter === 'active' ? 'secondary' : 'outline-secondary'}
                     onClick={() => setFilter('active')}
                 >
                     {t('dashboard.active')}
                 </Button>
             </ButtonGroup>
+
             <hr />
+
+            {/* Create Button */}
             <div className="d-flex justify-content-end mb-3">
-                <Button 
-                    variant="light" 
-                    className="border" 
+                <Button
+                    variant="light"
+                    className="border"
                     onClick={() => setShowAddShoppingList(true)}
                 >
                     <Plus size={20} className="me-2" />
                     {t('dashboard.create')}
                 </Button>
             </div>
-            {shoppingListsDashboard.length > 0 && 
+
+            {/* Display Shopping Lists */}
+            {shoppingListsDashboard.length > 0 &&
                 shoppingListsDashboard
                     .filter(list => filter === 'all' || list.status === 'active')
                     .map(shoppingList => (
                         <ShoppingListShortDetail
                             key={shoppingList.id}
                             shoppingList={shoppingList}
+                            className="mb-3" // Add margin to each list item
                         />
                     ))
             }
+
+            {/* No active lists message */}
             {shoppingListsDashboard.length > 0 && 
                 shoppingListsDashboard
                     .filter(list => filter === 'all' || list.status === 'active').length === 0 && 
-                    <h1>
-                        {t('dashboard.noActiveLists')}
-                    </h1>
+                    <h1 className="text-center">{t('dashboard.noActiveLists')}</h1>
             }
-            {shoppingListsDashboard.length == 0 && 
-                <h1>
-                    {t('dashboard.noLists')}
-                </h1>
+
+            {/* No lists message */}
+            {shoppingListsDashboard.length === 0 && 
+                <h1 className="text-center">{t('dashboard.noLists')}</h1>
             }
-            {showAddShoppingList &&
+
+            {/* Add Shopping List Modal */}
+            {showAddShoppingList && 
                 <AddShoppingList
                     showAddShoppingListModal={!!showAddShoppingList}
                     handleClose={() => setShowAddShoppingList(false)}
                 />
             }
-        </div>
+        </Container>
     )
 }
